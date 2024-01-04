@@ -1,12 +1,14 @@
 <?php
 // Set the path to your resume file
-$resumePath = 'C:\xampp\htdocs\Page\ArokiyaDeniferSResume.pdf';
+$relativePath = 'C:\xampp\htdocs\Page\ArokiyaDeniferSResume.pdf';
+$baseUrl = 'http://localhost:8080';
+$resumeUrl = $baseUrl . $relativePath;
 
 // Force download when the user clicks the link
 if (isset($_GET['download'])) {
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="Arokiya_Denifer_Resume.pdf"');
-    readfile($resumePath);
+    readfile($resumeUrl);
     exit;
 }
 ?>
