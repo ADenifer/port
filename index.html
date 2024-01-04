@@ -1,17 +1,3 @@
-<?php
-// Set the path to your resume file
-
-$resumeUrl = 'ArokiyaDeniferSResume.pdf';
-
-// Force download when the user clicks the link
-if (isset($_GET['download'])) {
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="Arokiya_Denifer_Resume.pdf"');
-    readfile($resumeUrl);
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +92,7 @@ if (isset($_GET['download'])) {
     <section class="resume">
         <h2>Resume</h2>
         <p>Download my resume:</p>
-        <a href="?download=1">Download Resume</a>
+        <a href="ArokiyaDeniferSResume.pdf" download="Arokiya_Denifer_Resume.pdf">Download Resume</a>
     </section>
 
 </body>
